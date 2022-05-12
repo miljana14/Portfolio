@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Exo';
+    src: url(../fonts/static/Exo-Medium.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Exo';
+    font-weight: 800;
+    font-style: italic;
+    src: url(../fonts/static/Exo-BlackItalic.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Exo';
+    font-weight: 100;
+    font-style: italic;
+    src: url(../fonts/static/Exo-LightItalic.ttf);
+  }
+  
+  :root {
+    --main-color: #2c2272;
+    --main-dark-color: #1E174D;
+    --dark-color: #0c0920;
+  
+    --text-light-color: #d7d2f8;
+    --bright-color: #422BD9;
+  }
+  
+  * {
+    color: var(--text-light-color);
+    font-family: 'Exo';
+  }
+  
+  html {
+      
+      background-image: url('https://38.media.tumblr.com/440a34dda29466e0d2896ba982b8e8b6/tumblr_ngy9vsbJna1qav3uso1_500.gif');
+      background-color: var(--main-dark-color);
+      /* background-image: url('images/portfolio.jpg'); */
+      background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-blend-mode: color-dodge;
+  background-size: cover;
+  }

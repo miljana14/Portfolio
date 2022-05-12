@@ -1,0 +1,330 @@
+@import "variables.css";
+
+* {
+  box-sizing: border-box;
+}
+
+  body{
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template:
+      "nav"  
+      "main"  
+      "footer" ;
+     
+  }
+
+  nav {
+    display: flex;
+    align-self: center;
+    opacity: 100%;
+  }
+
+  nav h1{
+    font-size: 300%;
+    float: left;
+    padding-left: 5%;
+    text-shadow: 2px 2px var(--bright-color);
+  }
+
+  nav a{
+    text-decoration: none;
+  }
+
+  nav .a{
+    /* margin-left: auto;
+    margin-right: 5%; */
+    margin: auto 5%;
+    margin-left: auto;
+    font-size: large;
+   
+  }
+  
+  nav .a a {
+    text-decoration: none;
+    padding: 1em;
+    display: none;
+    
+  }
+
+  nav .a a:hover{
+      background-color: var(--main-color);
+      border-radius: 10%;
+  }
+
+
+  nav .a .nav-icon i {
+    color: var(--text-light-color);
+    font-size: 1.5rem;
+    border: 1px solid var(--text-light-color);
+    padding: 0.3rem;
+    border-radius: 5px;
+    margin: 3.3rem;
+  }
+  nav .a .nav-icon i:hover {
+    background-color: var(--bright-color);
+  }
+  
+  main{
+    display: grid;
+    grid-template:
+      "p img" ;
+    grid-area: main;
+  }
+
+    main img{
+      width: 40%;
+      align-self: center;
+      justify-self: center;
+      grid-area: img;
+      box-shadow: -20px -20px 10px var(--bright-color);
+      border-radius: 2%;
+      transition:  transform 2s; 
+  }
+
+  main img:hover{
+    transform: scale(1.4) rotate(0.01deg);
+  } 
+
+  main div{
+    width: 60%;
+    align-self: center;
+    justify-self: center;
+    grid-area: p;
+    font-size: 150%;
+    text-align: center;
+}
+
+main div button{
+    background-color: var(--bright-color);
+    width: 60%;
+    height: 45px;
+    border: none;
+    border-radius: 3%;
+    font-size: large;
+}
+
+main div a button{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .a .nav-icon {
+    display: none;
+  }
+
+  nav .a > a {
+    display: inline-block !important;
+  }
+
+}
+
+@media (max-width: 700px) {
+  main{
+    display: inline-block !important;
+  }
+  main .div{
+    margin: 10% auto;
+    position: relative;
+  }
+
+  main img{
+    position: absolute;
+    left: 50%;
+    transform: translate( -50%);
+  }
+}
+
+.body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+form {   
+    border: 3px solid #f1f1f1;   
+    width: 70%;
+    height: auto;
+}  
+
+        
+.container {   
+    padding: 25px;   
+    background-color: var(--text-light-color);  
+    
+}
+
+.container label{
+    color: var(--dark-color);
+}
+
+
+button {   
+    background-color: var(--bright-color);    
+    width: 100%;  
+    color: var(--text-light-color);   
+    padding: 15px;   
+    margin: 10px 0px;   
+    border: none;   
+}  
+
+button:hover {   
+    opacity: 0.7;   
+}  
+
+.container > input {   
+    width: 100%;   
+    margin: 8px 0;  
+    padding: 12px 20px;   
+    border: none;
+    background-color: var(--text-light-color);  
+    border-bottom: 2px solid var(--bright-color);   
+    box-sizing: border-box; 
+    color: var(--dark-color);  
+}  
+
+.container > textarea {   
+    width: 100%;   
+    margin: 8px 0;  
+    padding: 12px 20px;   
+    border: none;
+    background-color: var(--text-light-color);  
+    border-bottom: 2px solid var(--bright-color);     
+    box-sizing: border-box;  
+    color: var(--dark-color);   
+}  
+
+.mapouter{
+  position:relative;
+  text-align:center;
+  height:500px;
+  width:100%;
+}
+
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:500px;
+  width:100%;
+}
+
+section{
+  margin: 0 auto;
+  width: 80%;
+}
+
+.collapsible {
+  background-color: var(--dark-color);
+  color: var(--text-light-color);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: var(--bright-color);
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: var(--text-light-color);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: var(--main-color);
+}
+
+.content table,th,td{
+  margin: 0px auto;
+  width: 80%;
+  border: 1px solid var(--text-light-color);
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.content table > td {
+  width: 33% ;
+}
+
+.content table tr th {
+  background-color: var(--dark-color);
+}
+
+.content dl dt{
+  font-weight: bold;
+  font-size: large;
+}
+
+#section{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+div.gallery {
+  border: 1px solid var(--bright-color);
+  margin: 5px auto;
+  vertical-align: top;
+}
+
+div.gallery:hover {
+  border: 1px solid var(--dark-color);
+}
+
+div.gallery img {
+  width: 100%;
+  height: 35vh;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+div.desc ul{
+  padding: 15px;
+  text-align: left;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 25%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 50%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
